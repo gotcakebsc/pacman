@@ -39,7 +39,7 @@ StartupScene.prototype.getY = function () {
 StartupScene.prototype._drawTitle = function (ctx) {
   ctx.fillStyle = "#ffff00";
   ctx.font = "bold 90px 'Lucida Console', Monaco, monospace"
-  ctx.fillText("PAC-MAN", 76, 150);
+  ctx.fillText("GOT-CAKE-MAN", 76, 150);
 };
 
 StartupScene.prototype._drawControlsHelp = function (ctx) {
