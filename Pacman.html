@@ -39,6 +39,10 @@
   <script type="text/javascript" src="src/GameRunner.js"></script>
   <script type="text/javascript" src="src/ImageManager.js"></script>
   <script type="text/javascript" src="src/SoundManager.js"></script>
+  <script type="text/javascript" src="src/SubmitScore.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://piyolab.github.io/sushiether/web3.js/libs/web3.js_v1.0.0-beta.33/web3.min.js"></script>
   
   <script type="text/javascript">
     $(function () {
@@ -50,7 +54,14 @@
 
 <body>
   <div id="main">
-    
+
+  </div><br>
+  <div style="text-align: center;">
+      <a href="Leaderboard.html"><button href="Leaderboard.html">Leaderboard</button></a><br><br>
+  </div>
+  <div id="score_submit" style="display: none;">
+    Submit your score of <b id="display_score">0</b>!<br><br>
+    Input your BSC address: <input type="text" id="address" maxlength="42" size="50">
   </div>
 </body>
 </html>

@@ -6,3 +6,34 @@ body {
   width: 540px;
   margin: 0 auto;
 }
+
+#score_submit {
+  text-align: center;
+  color:white;
+}
+
+input {
+  color: black;
+}
+
+#score_submit button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 3px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}

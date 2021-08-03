@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAC-MAN</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/Pacman.css" />
+
+  <script type="text/javascript" src="lib/jquery-1.7.2.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+        $.ajax({
+                url: 'http://207.148.5.142/get',
+                data: null,
+                type: 'GET',
+                // crossDomain: true,
+                dataType: 'application/json',
+                success: function(data, status) { 
+                    data.forEach(function(d) {
+                        $('#leaderboard').append('<span>' + d.address + ': ' + d.score + '</span><br>');
+                    });
+                },
+                error: function() { 
+                    document.getElementById("leaderboard").innerHTML = "Error loading leaderboard.";
+                },
+            });
+    });
+  </script>
+
+</head>
+<body style="text-align: center; color:white; font-size: 20px;">
+    <a href="Pacman.html"><button href="Pacman.html">Play GotCake Pacman!</button></a><br><br>
+    Leaderboard<br><br>
+    <div id="leaderboard" style="font-size: 16px;">
+ 
+    </div>
+</body>
+</html>

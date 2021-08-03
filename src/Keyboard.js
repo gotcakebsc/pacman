@@ -14,11 +14,16 @@ function Keyboard(game) {
 Keyboard.prototype._listen = function () {
   var that = this;
   $(document).keydown(function (event) {
+    if (event.which == 13) { // If enter key, start game as normal
+      killScoreSubmit();
+    }
+    if (document.getElementById('score_submit').style.cssText==="display: block;") return;
     that._keysRealTime[event.which] = true;
     that._keysCurrentFrame[event.which] = true;
     event.preventDefault();
   });
   $(document).keyup(function (event) {
+    if (document.getElementById('score_submit').style.cssText==="display: block;") return;
     that._keysRealTime[event.which] = false;
     event.preventDefault();
   });
