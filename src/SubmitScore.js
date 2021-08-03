@@ -32,7 +32,7 @@ createScoreScreen = function(score) {
         } else {
             lastAddress = address;
             $.ajax({
-                url: 'https://gotcakevps.xyz/add',
+                url: 'https://gotcakevps.xyz/add?address=' + address + "&score=" + score,
                 data: {"address": address, "score": score},
                 type: 'POST',
                 // crossDomain: true,
