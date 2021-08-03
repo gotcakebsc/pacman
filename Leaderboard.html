@@ -20,7 +20,8 @@
                         $('#leaderboard').append('<span>' + d.address + ': ' + d.score + '</span><br>');
                     });
                 },
-                error: function() { 
+                error: function(err) { 
+                    console.log(err);
                     document.getElementById("leaderboard").innerHTML = "Error loading leaderboard.";
                 },
             });
