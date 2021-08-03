@@ -16,7 +16,7 @@
                 // crossDomain: true,
                 dataType: 'text',
                 success: function(data, status) { 
-                    data.forEach(function(d) {
+                    JSON.parse(data).forEach(function(d) {
                         $('#leaderboard').append('<span>' + d.address + ': ' + d.score + '</span><br>');
                     });
                 },
