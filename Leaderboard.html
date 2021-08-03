@@ -14,9 +14,9 @@
                 data: null,
                 type: 'GET',
                 // crossDomain: true,
-                dataType: 'application/json',
+                dataType: 'text',
                 success: function(data, status) { 
-                    data.forEach(function(d) {
+                    json_encode(data).forEach(function(d) {
                         $('#leaderboard').append('<span>' + d.address + ': ' + d.score + '</span><br>');
                     });
                 },
