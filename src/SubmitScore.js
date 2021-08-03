@@ -36,17 +36,26 @@ createScoreScreen = function(score) {
                 data: {"address": address, "score": score},
                 type: 'POST',
                 // crossDomain: true,
-                dataType: 'application/json',
-                success: function() { /*alert("Success");*/ },
-            error: function() { /*alert('Failed!');*/ },
+                dataType: 'text',
+                success: function() { 
+                    killScoreSubmit();
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Score submitted to leaderboard!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                },
+                error: function() { 
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'There was an error submitting your score.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                },
             });
-            killScoreSubmit();
-            Swal.fire({
-                title: 'Success!',
-                text: 'Score submitted to leaderboard!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
+
         }
     });
 }
